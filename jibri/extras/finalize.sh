@@ -31,4 +31,4 @@ echo -e "Video File Name: $VIDEO_FILE_NAME"
 echo -e "Renamed Video: $RENAMED_VIDEO"
 
 echo -e "Uploading..."
-aws s3 cp $RENAMED_VIDEO s3://$JIBRY_S3_BUCKET_NAME/ --debug 2>&1 >> /config/logs/upload.0.txt
+aws s3 cp $RENAMED_VIDEO s3://$JIBRI_S3_BUCKET_NAME/ --debug 2>&1 >> /config/logs/upload.0.txt
