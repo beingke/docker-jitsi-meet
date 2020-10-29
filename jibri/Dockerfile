@@ -44,7 +44,13 @@ RUN \
         && apt-dpkg-wrap apt-get install -y jitsi-upload-integrations jq \
         && apt-cleanup
 
+RUN \
+        apt-dpkg-wrap apt-get update \
+        && apt-dpkg-wrap apt-get install -y python3-pip python3-setuptools \
+				&& pip3 install wheel \
+        && pip3 install awscli --upgrade \
+        && apt-cleanup
+
 COPY rootfs/ /
 
 VOLUME /config
-

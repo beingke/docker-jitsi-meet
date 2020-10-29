@@ -25,12 +25,14 @@ services:
             - JIBRI_RECORDER_PASSWORD
             - JIBRI_RECORDING_DIR
             - JIBRI_FINALIZE_RECORDING_SCRIPT_PATH
+            - JIBRI_S3_BUCKET_NAME
             - JIBRI_STRIP_DOMAIN_JID
             - JIBRI_LOGS_DIR
             - DISPLAY=:0
             - TZ
+            - AWS_ACCESS_KEY_ID
+            - AWS_SECRET_ACCESS_KEY
         depends_on:
             - jicofo
         networks:
             meet.jitsi:
-
